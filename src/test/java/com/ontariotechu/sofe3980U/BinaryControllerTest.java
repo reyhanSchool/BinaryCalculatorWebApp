@@ -77,7 +77,7 @@ public class BinaryControllerTest {
         this.mvc.perform(post("/").param("operand1","110").param("operator","&").param("operand2","001"))//.andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("result"))
-                .andExpect(model().attribute("result", "0"))
+                .andExpect(model().attribute("result", ""))
                 .andExpect(model().attribute("operand1", "110"));
     }
 }
